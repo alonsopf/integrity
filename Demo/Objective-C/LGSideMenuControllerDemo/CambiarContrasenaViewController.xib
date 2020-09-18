@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CambiarContrasenaViewController">
+            <connections>
+                <outlet property="anterior" destination="p6A-eL-A9B" id="GaC-1Y-kzo"/>
+                <outlet property="pass" destination="Str-Vj-3bs" id="cJv-qp-Zqg"/>
+                <outlet property="pass1" destination="msr-46-g1A" id="yXE-9j-IZp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña nueva" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Str-Vj-3bs">
+                    <rect key="frame" x="29" y="144" width="317" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="whR-nn-TAI"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="msr-46-g1A">
+                    <rect key="frame" x="29" y="203" width="317" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="SqI-7w-gXS"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Kd-RA-rI1">
+                    <rect key="frame" x="29" y="262" width="317" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.52769577499999998" blue="0.81021654610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="aLl-0o-YyW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                    <state key="normal" title="Cambiar">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cambiarContrasena:" destination="-1" eventType="touchUpInside" id="N0F-E8-DRe"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña anterior" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6A-eL-A9B">
+                    <rect key="frame" x="29" y="85" width="317" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Xnr-Jq-GEi"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.89009910820000004" green="0.89025193449999995" blue="0.89008945230000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="msr-46-g1A" firstAttribute="top" secondItem="Str-Vj-3bs" secondAttribute="bottom" constant="29" id="11C-gt-sRW"/>
+                <constraint firstAttribute="trailing" secondItem="Str-Vj-3bs" secondAttribute="trailing" constant="29" id="4r5-Cb-C6q"/>
+                <constraint firstAttribute="trailing" secondItem="1Kd-RA-rI1" secondAttribute="trailing" constant="29" id="DML-ZG-uKq"/>
+                <constraint firstItem="p6A-eL-A9B" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="LQP-jz-pLF"/>
+                <constraint firstItem="1Kd-RA-rI1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="29" id="LqW-fl-8OK"/>
+                <constraint firstAttribute="trailing" secondItem="p6A-eL-A9B" secondAttribute="trailing" constant="29" id="Sp2-Ai-3ad"/>
+                <constraint firstItem="1Kd-RA-rI1" firstAttribute="top" secondItem="msr-46-g1A" secondAttribute="bottom" constant="29" id="cdI-3q-CbQ"/>
+                <constraint firstAttribute="trailing" secondItem="msr-46-g1A" secondAttribute="trailing" constant="29" id="ddV-Vw-Gl6"/>
+                <constraint firstItem="Str-Vj-3bs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="29" id="diC-Mt-jMk"/>
+                <constraint firstItem="p6A-eL-A9B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="29" id="hjh-qU-P9m"/>
+                <constraint firstItem="msr-46-g1A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="29" id="lbK-Sc-wby"/>
+                <constraint firstItem="Str-Vj-3bs" firstAttribute="top" secondItem="p6A-eL-A9B" secondAttribute="bottom" constant="29" id="qgX-PJ-4bm"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
